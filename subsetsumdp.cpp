@@ -25,7 +25,7 @@ int main()
     {
         for(int j=1;j<=sum;j++)
         {
-            if(arr[i]<sum)
+            if(arr[i-1]<=j)
             {
                 ar[i][j]=max(ar[i][j-arr[i-1]],ar[i-1][j]);
             }
