@@ -5,8 +5,8 @@ using namespace std;
 int main()
 {
     int arr[]={3, 4, 5, 2};
-    //int l=sizeof(arr);
-    int l=4;
+    int l=sizeof(arr)/sizeof(arr[0]);
+    //int l=4;
     
     int sum=6;
     int ar[100][100];
@@ -27,7 +27,7 @@ int main()
         {
             if(arr[i-1]<=j)
             {
-                ar[i][j]=max(ar[i][j-arr[i-1]],ar[i-1][j]);
+                ar[i][j]=max(ar[i-1][j-arr[i-1]],ar[i-1][j]);
             }
             else
             ar[i][j]=ar[i-1][j];
